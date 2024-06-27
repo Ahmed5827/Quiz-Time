@@ -1,0 +1,102 @@
+.sidebar {
+    width: 100%;
+    background-color: rgb(248, 249, 250);
+    height: 115vh;
+    padding-left: calc(var(--bs-gutter-x)* .5);
+    
+  }
+ 
+
+  /* Sidebar links */
+  .notactive {
+    display: block;
+    color: rgb(105, 111, 121);
+    padding: 16px;
+    border-radius: 30px;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .brand{
+    font-family:Poppins; 
+    font-weight: bold;
+    font-size: 20px;
+    display: block;
+    color: rgb(105, 111, 121);
+    padding: 16px;
+    border-radius: 30px;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  /* Active/current link */
+  .active {
+    display: block;
+    padding: 16px;
+    border-radius: 30px;
+    text-align: center;
+    text-decoration: none;
+    background-color: rgb(134, 146, 166);
+    color: white;
+  }
+  
+  /* Links on mouse-over */
+  .active:hover {
+    background-color: #555;
+    color: white;
+  }
+  
+  .notactive:hover {
+    display: block;
+    color: rgb(0, 79, 206);
+    padding: 16px;
+    border-radius: 30px;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+  
+  .form-inlinee{
+    display: flex;
+    margin-top: 5px;
+    float: left;
+    margin-left: 2%;
+    
+    
+  }
+.content{
+  background-color: #f2efef;
+  padding-top: 1%;
+}
+ 
+
+  .scope.form-control{
+    height: 50px;
+    font-size: 14px;
+    background-image: url(https://cdn2.hubspot.net/hubfs/4004166/bioticresearch_website_assets/images/search_icon.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 40px;
+    background-color: #fff;
+    border: 1px solid #000;
+    box-shadow: none;
+    
+    
+  }
+  
+  .pfp{
+    border-radius: 50% ;
+    width: 50px; 
+    height: 50px;
+    margin-right: 10%;
+  }
+
+  .page-footer{
+    margin-top: 60vh;
+    border-radius: 30px;
+    text-align: center;
+    
+    text-decoration: none;
+    color: white;
+  }

@@ -1,0 +1,15 @@
+.Quizpic{
+    border-radius: 30px;
+    width: 500px;
+    height: 300px;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+.stats{
+    list-style-type: none;
+    
+}
+.stats>li{
+    margin-bottom: 10%;
+    margin-top: 5%;
+}

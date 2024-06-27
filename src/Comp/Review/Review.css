@@ -1,0 +1,18 @@
+.positioned{
+    margin-left: 10%;
+}
+.correct{
+    color: green;
+    text-decoration: underline;
+    font-weight: 800;
+}
+
+.wrong{
+    color: red;
+    text-decoration: underline;
+    font-weight: 800;
+}
+
+.sep{
+    margin-left: 2%;
+}

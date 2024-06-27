@@ -1,0 +1,43 @@
+.medaille{
+    width: 100px;
+}
+.achivement{
+    color:rgb(105, 111, 121);
+    text-align: center;
+}
+.colored{
+    color: rgb(105, 111, 121);
+    text-decoration: none;
+    font-weight: 700;
+    
+
+}
+.profile
+{
+    width: 80%;
+    height: 100%;
+    border-radius: 30px;
+    padding-bottom: 2%;
+
+}
+
+.top-buttom{
+width: 100%;
+}
+.head{
+   padding-top: 2%;
+   
+}
+.stats{
+   padding: 2%;
+   padding-right: 5%;
+}
+.stats-attributs{
+    padding-top: 7%;
+}
+.topleft{
+   
+    display: flex;
+    justify-content: flex-end;
+    margin: 0% 3% 0% 0%;
+}
