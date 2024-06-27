@@ -1,0 +1,17 @@
+.quiz-pic{
+    height: 300px;
+    border-radius: 40px;
+    padding-right: 10%;
+    margin-bottom: 5%;   
+}
+
+
+.colored1{
+    color: rgb(105, 111, 121);
+
+}
+.radiocolor{
+    accent-color: rgb(26, 26, 27);
+    width: 20px;
+}
+
