@@ -1,13 +1,13 @@
-import React, { useState } from "react";
+import React, { useState,useContext } from "react";
 import Home from "../Home/Home";
 import Joi from "joi";
 import "./Login.css";
 import GoogleButton from "react-google-button";
 import { useNavigate } from "react-router-dom";
 import { Route, Routes } from "react-router-dom";
-
+import { UserContext } from '../UserContext';
 import { GoogleLogin } from "react-google-login";
-
+import defaultimg from "../../assets/default.jpeg"
 function Login(props) {
   const [logininfo, setlogininfo] = useState({ login: "", password: "" });
   const [ischecked, setchecked] = useState(false);
@@ -15,7 +15,9 @@ function Login(props) {
   const navigate = useNavigate();
   const clientID =
     "965453527920-vr412h4ff8hv0r5hv0cokua9norsjaf1.apps.googleusercontent.com";
-
+    
+    const { setUser  ,user} = useContext(UserContext);
+    console.log("user mtaa login" , user)
   const handlechange = (e) => {
     const x = { ...logininfo };
     x[e.target.name] = e.target.value;
@@ -36,7 +38,7 @@ function Login(props) {
   const handlesubmit = (e) => {
     const va = {};
     const x = {};
-
+    const defname="Guest"
     const { error } = schema.validate(logininfo, { abortEarly: false });
     if (error !== undefined) {
       for (let item of error.details) {
@@ -46,6 +48,8 @@ function Login(props) {
       }
       setError(va);
     } else {
+      setUser({ profileImg: defaultimg, name: defname });
+
       navigate("/");
     }
 
@@ -53,7 +57,12 @@ function Login(props) {
     e.preventDefault();
   };
 
-  const onSuccess=(e)=>{console.log(e) ;navigate("/");}
+  const onSuccess=(e)=>{
+    const profileImg = e["profileObj"]["imageUrl"];
+    const name = e["profileObj"]["name"];
+
+    setUser({ profileImg, name });
+    navigate("/");}
   const onFailure =()=>{console.log("failure")}
 
   return (

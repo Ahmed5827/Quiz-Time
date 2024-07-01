@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useContext} from "react";
 import "./Dashboard.css";
 import defau from "../../assets/default.jpeg";
 import { IoFlagSharp } from "react-icons/io5";
@@ -8,18 +8,21 @@ import M1 from "../../assets/M1.png";
 import M2 from "../../assets/M2.png";
 import M3 from "../../assets/M3.png";
 import Category from "./../Resusable/Category/Category";
+import { UserContext } from '../UserContext';
 function Dashboard(props) {
+  const { user } = useContext(UserContext);
+
   return (
     <div className="container-fluid">
       <div className="row">
         <div className="container-fluid">
           <div className="row">
             <div className="col centred">
-              <img src={defau} className="profile" alt="pfp"></img>
+              <img src={user.profileImg} className="profile" alt="pfp"></img>
             </div>
             <div className="col">
               <div className="row stats">
-                <h3>Jean Doe</h3>
+                <h3>{user.name}</h3>
                 <small>Bonus booster 24lv</small>
                 <div class="progress"  style={{ padding: 'unset' }}>
                   <div

@@ -16,6 +16,7 @@ import Arts from "../../assets/Art.jpg"
 function Quiz(props) {
   const navigate = useNavigate();
   const location = useLocation();
+  
   const [time , settime] = useState(30)
   const { image } = location.state || {}; // Correctly retrieve the image from the state
   const current = new Date();
