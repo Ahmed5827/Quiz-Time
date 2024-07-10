@@ -23,7 +23,7 @@ function Home(props) {
 
 
   const [selectedpage, setSelectedPage] = useState("/");
-  const clientID = "965453527920-vr412h4ff8hv0r5hv0cokua9norsjaf1.apps.googleusercontent.com";
+  const clientID = "API Key Here!";
   
   const active = (e) => {
     return e === selectedpage ? "active" : "notactive";
