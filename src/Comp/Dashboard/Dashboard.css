@@ -14,9 +14,9 @@
 }
 .profile
 {
-    width: 600px;
+    width: 500px;
     height: 350px;
-    border-radius: 30px;
+    border-radius: 10%;
     padding-bottom: 2%;
 
 }

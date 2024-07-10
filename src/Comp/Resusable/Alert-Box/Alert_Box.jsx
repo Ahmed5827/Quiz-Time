@@ -17,7 +17,7 @@ function Alert_Box(props) {
       <div className="row">
         <div className="col">
           {" "}
-          <p class="mb-0 centred">
+          <p class="mb-0 centred point">
             <a
               onClick={() => {
                 navigate(-1);
@@ -29,7 +29,7 @@ function Alert_Box(props) {
         </div>
         <div className="col">
           {" "}
-          <p class="mb-0 centred">
+          <p class="mb-0 centred point">
             <a
               onClick={() => {
                 navigate("/");

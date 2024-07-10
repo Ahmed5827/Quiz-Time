@@ -19,7 +19,7 @@ import { UserContext } from '../UserContext';
 function Home(props) {
   const location = useLocation();
   const navigate = useNavigate();
-  const { user } = useContext(UserContext);
+  const { user, setUser } = useContext(UserContext);
 
 
   const [selectedpage, setSelectedPage] = useState("/");
@@ -32,7 +32,7 @@ function Home(props) {
   const handleclick = (e) => {
     setSelectedPage(e);
   };
-console.log("home",user)
+console.log("home::::",user)
   const onLogoutSuccess = async () => {
     const auth2 = window.gapi.auth2.getAuthInstance();
   console.log("this user",user)
@@ -105,6 +105,7 @@ console.log("home",user)
                   </li>
                   <Link className="nav-link" style={{ marginLeft: "44vw", display: "flex" }} to="/Login">
                     <img className="pfp" src={user.profileImg} alt="anonymos"></img>
+                    
                     <p>{user.name}</p>
                   </Link>
                 </ul>
